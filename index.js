@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cors({
-    origin: 'http://localhost:8081',
+    origin: 'http://localhost:8080',
     credentials:true
 }));
 app.use('/users',usersRouter);
@@ -18,3 +18,6 @@ const port = process.env.PORT || 5003
 app.listen(port, ()=>{
     console.log(`http://localhost:${port}`);
 })
+
+//editing without password hashing
+//only backend
